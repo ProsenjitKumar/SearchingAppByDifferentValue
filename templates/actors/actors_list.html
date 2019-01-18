@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Searching App</title>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Actors list</h2>
+
+    <form class="form-inline" action="" method="GET">
+        {{ form }}
+        <button class="btn" type="submit">Search</button>
+        </fieldset>
+    </form>
+
+    <table class="table table-bordered table-condensed">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+        </tr>
+        {% for object in object_list %}
+        <tr>
+            <td>{{object.name}}</td>
+            <td>{{object.surname}}</td>
+            <td>{{object.age}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% if is_paginated %}
+        {% include "paginator.html" %}
+    {% endif %}
+
+</div>
+
+</body>
+</html>
