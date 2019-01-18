@@ -1,0 +1,2 @@
+# SearchingAppByDifferentValue
+django searching app
